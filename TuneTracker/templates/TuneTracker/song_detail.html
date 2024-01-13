@@ -1,0 +1,14 @@
+{% extends 'TuneTracker/base.html' %}
+
+{% block content %}
+    <h2>Songs Details</h2>
+    {% if song %}
+        <ul>
+                <li>Song Title - {{song.title}}</li>
+                <li>Artist - {{song.artist}}</li>
+                <li>Song File - {{song.file}}</li>
+        </ul>
+    {% else %}
+        <p>No details files available.</p>
+    {% endif %}
+{% endblock %}

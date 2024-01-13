@@ -1,0 +1,14 @@
+{% extends 'TuneTracker/base.html' %}
+
+{% block content %}
+    <h2>Number of Songs every Artists</h2>
+    {% if song_count_dict %}
+        <ul>
+            {% for key,value in song_count_dict.items %}
+                <li>{{key}} : {{value}}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No music files available.</p>
+    {% endif %}
+{% endblock %}

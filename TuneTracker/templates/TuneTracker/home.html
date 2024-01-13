@@ -1,0 +1,16 @@
+{% extends 'TuneTracker/base.html' %}
+
+{% block content %}
+    <h2>My Favourite Tunes</h2>
+    <p>Click on music files to see the song detail</p>
+    {% if songs %}
+        <ul>
+            {% for music_file in songs %}
+            <li><a href="{% url 'song_detail' music_file.id %}" class="btn"><div class="item"><span class="fw-bold">{{music_file.file}}</span><br></div></a></li>
+                
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No music files available.</p>
+    {% endif %}
+{% endblock %}

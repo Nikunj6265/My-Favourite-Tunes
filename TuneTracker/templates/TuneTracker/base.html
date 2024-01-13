@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Favourite Tunes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="/">My Favourite Tunes</a>
+        <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/add_artist/">Add New Artist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/upload_song/">Add New Songs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/artist_songs/">Artist Songs</a>
+                </li>
+                
+        </ul>
+    </nav>
+    <div class="container mt-4">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
